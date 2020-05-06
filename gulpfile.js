@@ -17,13 +17,13 @@ function bs() {
   watch("./js/*.js").on('change', browserSync.reload);
 };
 
-//min CSS files
-gulp.task('default', function () {
-    gulp.src('src/**/*.css')
-        .pipe(cssmin())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('dist'));
-});
+// //min CSS files
+// function minCss() {
+//     src('src/**/*.css')
+//         .pipe(cssmin())
+//         .pipe(rename({suffix: '.min'}))
+//         .pipe(dest('dist'));
+// };
 
 // Compile sass into CSS & auto-inject into browsers
 function serveSass() {
