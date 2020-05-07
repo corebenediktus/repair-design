@@ -32,13 +32,13 @@ function serveSass() {
 };
 
 
-// //min CSS files
-// function minCss() {
-//     src('src/**/*.css')
-//         .pipe(cssmin())
-//         .pipe(rename({suffix: '.min'}))
-//         .pipe(dest('dist'));
-// };
+//min CSS files
+function csSmin() {
+    src("./css/**/*.css")
+        .pipe(cssmin())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(dest("./css"));
+};
 
 
 
