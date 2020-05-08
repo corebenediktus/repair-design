@@ -19,7 +19,6 @@ function bs() {
   watch("./js/*.js").on('change', browserSync.reload);
 };
 
-
 // Compile sass into CSS & auto-inject into browsers
 function serveSass() {
     return src("./sass/**/*.sass", "./sass/**/*.scss")
@@ -31,7 +30,6 @@ function serveSass() {
         .pipe(browserSync.stream());
 };
 
-
 //min CSS files
 function csSmin() {
     src("./css/**/*.css")
@@ -39,7 +37,5 @@ function csSmin() {
         .pipe(rename({suffix: '.min'}))
         .pipe(dest("./css"));
 };
-
-
 
 exports.serve = bs;

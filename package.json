@@ -1,7 +1,7 @@
 {
   "name": "repair-design",
   "version": "1.0.0",
-  "description": "Сайт компании по ремонту квартир",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,18 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/corebenediktus/repair-design.git"
   },
-  "author": "Benj",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/corebenediktus/repair-design/issues"
   },
   "homepage": "https://github.com/corebenediktus/repair-design#readme",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-cssmin": "^0.2.0",
-    "gulp-sass": "^4.1.0"
-  },
-  "dependencies": {
-    "browser-sync": "^2.26.7"
+    "gulp": "^4.0.2"
   }
 }
