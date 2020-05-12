@@ -322,7 +322,8 @@ template {
   padding: 13px 20px;
   border: none;
   border-radius: 2px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: FuturaDemiC; }
   .button:hover {
     cursor: pointer; }
   .button--primary {
@@ -331,11 +332,21 @@ template {
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     transition: box-shadow 0.3s; }
     .button--primary:hover {
-      box-shadow: none; }
+      box-shadow: none;
+      color: #131313; }
   .button--outline {
     border: 1px solid #fff;
     background-color: transparent;
     color: #fff; }
+    .button--outline:hover {
+      background-color: #E3B873;
+      color: #fff;
+      box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+      transition: box-shadow 0.3s; }
+  .button--calculation {
+    padding: 19px 26px 16px; }
+  .button--request {
+    padding: 19px 46px 16px; }
 
 .container {
   width: 85%;
@@ -381,7 +392,8 @@ body {
 
 .logo {
   color: #E3B873;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: FuturaDemiC; }
 
 .nav__item {
   color: #fff;
@@ -393,7 +405,10 @@ body {
     color: #E3B873; }
 
 .phone {
-  color: #E3B873; }
+  color: #E3B873;
+  font-family: FuturaDemiC;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline; }
 
 .contacts__phone {
   margin-right: 45px; }
@@ -456,12 +471,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  align-items: center;
-  background-color: #131313; }
+  background-color: #131313;
+  font-family: FuturaDemiC; }
   .instagram__link {
+    display: flex;
+    align-items: center;
     text-transform: uppercase;
-    color: #E3B873;
     text-decoration: none;
+    color: #E3B873;
     transform: rotate(90deg);
     line-height: 0.8; }
     .instagram__link::after {

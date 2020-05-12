@@ -3,6 +3,7 @@
   border: none
   border-radius: 2px
   text-transform: uppercase
+  font-family: FuturaDemiC
   &:hover
     cursor: pointer
 
@@ -14,7 +15,25 @@
     transition: box-shadow 0.3s
     &:hover
       box-shadow: none
+      color: $dark
+
+
   &--outline
     border: 1px solid $light
     background-color: transparent
     color: $light
+    &:hover
+      background-color: $primary
+      color: $light
+      box-shadow: 0px 5px 15px rgba($primary, 0.2)
+      transition: box-shadow 0.3s
+
+  &--calculation
+    padding: 19px 26px 16px
+
+  &--request
+    padding: 19px 46px 16px
+    
+
+
+
