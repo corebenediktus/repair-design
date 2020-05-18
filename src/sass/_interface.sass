@@ -1,10 +1,11 @@
 .button
-  padding: 13px 20px
+  padding: 12px 20px 11px 20px
   border: none
   border-radius: 2px
   text-transform: uppercase
   font-family: FuturaDemiC
-  font-size: 0.93rem
+  font-size: 0.88rem
+
   &:hover
     cursor: pointer
 
@@ -30,11 +31,47 @@
       transition: box-shadow 0.3s
 
   &--calculation
-    padding: 19px 26px 16px
+    padding: 19px 26px 19px
+    font-size: 0.85rem
 
   &--request
-    padding: 19px 46px 16px
+    padding: 17px 40px 18px
+    font-size: 0.86rem
     
+.label
+  font-size: 1.07rem
+  &--light
+    color: rgba($light, 0.5)
+
+.input
+  background-color: transparent
+  border: none
+  border-bottom: 1px solid rgbd(54, 54, 54, 0.3)    
+  font-size: 1.285rem
+  color: $light
+  padding: 0.5rem 0
+  &::placeholder
+    color: $light
+
+.policy
+  &__checkbox
+    opacity: 0
+    visibility: hidden
+    &:checked +
+      .policy__label
+        &::before
+         background: $primary url('../img/modal/check.svg') no-repeat center /0.8rem
+      
+  &__label
+    display: flex
+    align-items: center
+    &::before
+      content: ''
+      width: 18px
+      height: 18px
+      border: 1px solid $primary
+      border-radius: 1px
+      margin-right: 0.64rem
 
 
 

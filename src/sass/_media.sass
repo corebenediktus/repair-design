@@ -1,35 +1,147 @@
-@media screen and ( max-width: 1200px )
-  html
+  
+@media screen and ( max-width: 1500px ) 
+  .nav__item
     font-size: 12px
-  .nav
-    &__item
-      margin-right: 1rem  
 
-@media screen and ( max-width: 992px )    
+
+@media screen and ( max-width: 1440px ) 
+  .logo 
+    
+    margin-left: -26px
+
+  .nav
+    margin: -2px -18px 0px 0px  
+
+  .button--call
+    margin: 0px -5px 0px -4px
+
+  .instagram__link 
+    margin: -25px -3px 0px 0px
+
+  .hero__content
+    margin: -90px 0px 0px 35px  
+
+  .hero__scroll-down
+    margin: 0px 0px 3px -16px
+
+
+  .card
+    &__title
+      margin-bottom: 10px
+    &__text 
+      padding: 25px 32px
+
+
+
+  .types__card--1
+    margin: -2px 0px 0px -6px
+
+  .types__card--2
+    margin: -1px -5px 0px 0px
+
+  .types__card--3
+    margin: -1px -9px 0px 6px
+
+
+  .types__section-title--design
+    margin-bottom: 8px
+    padding-top: 10px  
+
+  .types__card--4
+    margin: -2px 2px 0px -6px
+
+  .types__card--5
+    margin: -3px 1px 0px 1px
+
+  .types__card--6
+    margin: -3px -6px 0px 6px
+
+    
+  .card__list--design
+    padding: 0 0 32px 16px
+    margin: -1px 0px 0px -2px
+    font-size: 13px   
+
+
+
+  .card__pricetag--1
+    padding: 16px 82px 18px 32px
+    
+
+  .card__pricetag--2
+    padding: 18px 78px 15px 33px;
+
+  .card__pricetag--3
+    padding: 18px 78px 15px 33px
+    margin: 0px 0px -5px 0px  
+
+
+
+
+
+@media screen and ( max-width: 1380px ) 
+  .nav
+    display: none   
+
+     
+      
+@media screen and ( max-width: 1024px )  
+  
+  .hero
+    &__instagram
+      display: none
+    &__content
+      margin-left: 0
+  .menu
+    justify-content: space-between  
+
+  .row
+    display: flex
+    flex-direction: column
+    align-items: center 
+
+  .col
+    padding-bottom: 68px
+
+@media screen and ( max-width: 768px )    
+  
   .nav
     display: none
   .hero
     &__instagram
       display: none
     &__content
-      margin-left: 0  
-
-@media screen and ( max-width: 576px )
+      margin-left: 0
+      
   .contacts
     &__button
-      display: none
+      display: none   
+
+
+@media screen and ( max-width: 760px )  
+  .row
+    flex-direction: column
+    align-items: center
+  .types
+    &__card
+      margin-bottom: 5rem
+  .card
+    &__text
+      margin-left: 0        
+
+@media screen and ( max-width: 660px ) 
+  .contacts
     &__phone
       margin-right: 0
       color: $light
       text-decoration: none
-  .title
-      font-size: 1.64rem
+  
   .hero
     &__text
-      font-size: 1.29rem  
+        
       margin-bottom: 2.28rem
     &__content
-      max-width: 22.86rem
+      max-width: auto
     &__button
       display: block
       min-width: 22.86rem
@@ -37,10 +149,93 @@
     &__scroll-down
       display: none  
 
-@media screen and ( max-height: 525px )
+@media screen and ( max-height: 525px ) 
   .hero
     &__scroll-down
       display: none
 
-  
-  
+@media screen and ( max-width: 425px ) 
+  .types__card--1
+    margin: 13px 4px 0px 8px
+
+  .types__card--2
+    margin: 0 
+    left: 0
+
+  .types__card--3
+    margin: 0 
+    left: 0
+
+  .types__card--4
+    margin: 0 
+    left: 0 
+
+  .types__card--5
+    margin: 0 
+    left: 0 
+
+  .types__card--6
+    margin: 0 
+    left: 0 
+
+  .image--style
+    max-width: 100%
+    margin: 0 auto
+    left: 0
+
+  .card__text 
+    margin: 0
+
+
+
+
+
+
+
+
+@media screen and ( max-width: 390px ) 
+  .header
+    padding: 21px 0
+
+  .phone
+    font-size: 0.86rem
+    margin: 0 auto
+
+  .logo
+    margin: 0px -11px
+    font-size: 0.8rem
+
+  .title
+    margin: -2px -7px
+    font-size: 1.6rem
+    
+  .hero
+    &__content
+      margin-top: -20.5rem
+      margin-left: -1px
+      margin-bottom: 25px
+     
+    &__text
+      margin-top: 21px
+      margin-left: -10px
+      font-size: 17px
+ 
+
+
+  .hero__button 
+    min-width: 24.7rem
+    margin-bottom: 24px
+
+  .button--calculation
+    padding: 18px 0px 18px
+    margin: 56px -10px 30px
+    font-size: 12px
+ 
+  .button--request
+    padding: 18px 0px 18px
+    margin: 0px -10px -5px
+    font-size: 12px
+
+@media screen and ( max-width: 374px )
+  .hero__button 
+    min-width: -webkit-fill-available
