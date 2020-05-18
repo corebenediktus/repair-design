@@ -2,8 +2,7 @@
   font-family: 'Futura Book';
   src: url("../src/fonts/futura/FuturaBookC.woff") format("woff") url("../src/fonts/futura/FuturaBookC.woff2") format("woff2");
   font-weight: normal;
-  font-style: normal;
-  font-display: wrap; }
+  font-style: normal; }
 
 @font-face {
   font-family: 'Futura Demi';
@@ -665,11 +664,27 @@ body {
   .modal__button {
     align-self: flex-end; }
 
+@media (max-width: 2600px) and (min-width: 1440px) {
+  .col {
+    flex-basis: 0%; }
+  .row {
+    justify-content: space-around; } }
+
+@media (max-width: 2600px) and (min-width: 425px) {
+  .image {
+    max-width: 421px; } }
+
+@media screen and (max-width: 1600px) {
+  .row {
+    justify-content: space-between; } }
+
 @media screen and (max-width: 1500px) {
   .nav__item {
     font-size: 12px; } }
 
 @media screen and (max-width: 1440px) {
+  .section-title__heading {
+    font-size: 19.5px; }
   .logo {
     margin-left: -26px; }
   .nav {
@@ -677,11 +692,13 @@ body {
   .button--call {
     margin: 0px -5px 0px -4px; }
   .instagram__link {
-    margin: -25px -3px 0px 0px; }
+    margin: 40px -3px 0px 0px; }
   .hero__content {
-    margin: -90px 0px 0px 35px; }
+    margin: -25px 0px 0px 35px; }
   .hero__scroll-down {
-    margin: 0px 0px 3px -16px; }
+    margin: 0px 0px -26px -2px;
+    min-width: 17.9rem;
+    min-height: 7.4rem; }
   .card__title {
     margin-bottom: 10px; }
   .card__text {
@@ -712,6 +729,18 @@ body {
   .card__pricetag--3 {
     padding: 18px 78px 15px 33px;
     margin: 0px 0px -5px 0px; } }
+
+@media (max-width: 1440px) and (min-width: 1220px) {
+  .row {
+    justify-content: space-evenly; }
+  .col {
+    margin-right: 10px; } }
+
+@media (max-width: 1220px) and (min-width: 1024px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
 
 @media screen and (max-width: 1380px) {
   .nav {
@@ -766,6 +795,12 @@ body {
   .hero__scroll-down {
     display: none; } }
 
+@media screen and (max-width: 586px) {
+  .title {
+    font-size: 2rem; }
+  .hero__text {
+    font-size: 20px; } }
+
 @media screen and (max-height: 525px) {
   .hero__scroll-down {
     display: none; } }
@@ -793,9 +828,7 @@ body {
     margin: 0 auto;
     left: 0; }
   .card__text {
-    margin: 0; } }
-
-@media screen and (max-width: 390px) {
+    margin: 0; }
   .header {
     padding: 21px 0; }
   .phone {
@@ -805,28 +838,118 @@ body {
     margin: 0px -11px;
     font-size: 0.8rem; }
   .title {
-    margin: -2px -7px;
+    margin: 6px -8px -4px -8px;
     font-size: 1.6rem; }
-  .hero__content {
-    margin-top: -20.5rem;
-    margin-left: -1px;
-    margin-bottom: 25px; }
-  .hero__text {
-    margin-top: 21px;
-    margin-left: -10px;
-    font-size: 17px; }
+  .hero {
+    padding-top: 457px;
+    height: 533px; }
+    .hero__content {
+      margin-top: -356px;
+      margin-left: -1px; }
+    .hero__text {
+      margin-top: 21px;
+      margin-left: -10px;
+      font-size: 17px;
+      margin-bottom: 52px; }
   .hero__button {
     min-width: 24.7rem;
     margin-bottom: 24px; }
   .button--calculation {
-    padding: 18px 0px 18px;
-    margin: 56px -10px 30px;
+    margin: 0px 0px 25px -12px;
     font-size: 12px; }
   .button--request {
     padding: 18px 0px 18px;
     margin: 0px -10px -5px;
     font-size: 12px; } }
 
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 425px) {
+  .hero {
+    padding-top: 457px;
+    height: 533px; }
   .hero__button {
-    min-width: -webkit-fill-available; } }
+    min-width: 106%; }
+  .section-title__heading {
+    font-size: 21.5px; }
+  .image--style-1 {
+    max-width: 111%;
+    margin-left: -16px;
+    left: 0; }
+  .card__text {
+    margin: -146px 55px 0px -17px; }
+  .card__title {
+    font-size: 14.69px; }
+  .card__list {
+    padding: 0px 0px 0px 10px;
+    font-size: 10.7px;
+    line-height: 21px; }
+  .card__pricetag {
+    font-size: 15px;
+    padding: 11px 34px 8px 34px;
+    margin: -11px 0px 0px -32px;
+    left: 32px;
+    bottom: 0; }
+  .image--style-2 {
+    margin: -6px 0px -1px -9px;
+    width: 108%; }
+  .card__text--style-2 {
+    margin: -151px 59px 0px -9px; }
+  .card__pricetag--style-2 {
+    margin: 0px 0px 0px 0px;
+    padding: 13px 30px 6px 31px;
+    left: 0; }
+  .card__text--style-3 {
+    margin: -149px 56px 0px -9px; }
+  .card__pricetag--style-3 {
+    margin: 0px 0px 1px 1px;
+    left: 0;
+    padding: 10px 28px 10px 28px; }
+  .image--style-3 {
+    margin: -6px 0px -1px -9px;
+    width: 108%; }
+  .section__text--style-1 {
+    font-size: 14.5px;
+    line-height: 20.5px;
+    width: 100%; }
+  .image--style-4 {
+    margin: -11px 0px 0px -3px;
+    width: 104%; }
+  .card__text--style-4 {
+    margin: -138px 60px 0px -10px; }
+  .card__pricetag--4 {
+    margin: 0px 28px 5px 14px;
+    left: -16px;
+    padding: 11px 47px 12px 49px;
+    bottom: -43px; }
+  .image--style-5 {
+    margin: 29px 0px 0px -10px;
+    width: 106%; }
+  .card__text--style-5 {
+    margin: -145px 60px 0px -10px;
+    padding: 20px 0px 59px 32px; }
+  .card__pricetag--5 {
+    margin: 0px 0px -4px 44px;
+    left: -44px;
+    padding: 12px 48px 12px 44px;
+    bottom: -6px; }
+  .image--style-6 {
+    margin: 0px 0px 0px -10px;
+    max-width: 106%; }
+  .card__text--style-6 {
+    margin: -144px 60px 0px -11px;
+    padding: 17px 0px 66px 33px;
+    line-height: 21px; }
+  .card__pricetag--6 {
+    left: -10px;
+    margin: 0px 0px 0px 11px;
+    bottom: 0;
+    padding: 9px 47px 9px 44px; }
+  .button:hover {
+    cursor: none; }
+  .button--primary:hover {
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    color: #fff; }
+  .button--outline:hover {
+    transition: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: #fff; } }
