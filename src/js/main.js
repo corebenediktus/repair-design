@@ -8,10 +8,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   modalBtn.forEach(element => {
     element.addEventListener('click', swithModal);
   });
-
-
-
   closeBtn.addEventListener('click', swithModal);
-
 });
 
