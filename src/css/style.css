@@ -1,12 +1,13 @@
 @font-face {
   font-family: 'Futura Book';
-  src: url("../src/fonts/futura/FuturaBookC.woff") format("woff") url("../src/fonts/futura/FuturaBookC.woff2") format("woff2");
+  src: url("/fonts/futura/FuturaBookC.woff") format("woff"), url("/fonts/futura/FuturaBookC.woff2") format("woff2");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: wrap; }
 
 @font-face {
   font-family: 'Futura Demi';
-  src: url("../src/fonts/futura/FuturaDemiC.woff") format("woff") url("../src/fonts/futura/FuturaDemiC.woff2") format("woff2");
+  src: url("/fonts/futura/FuturaDemiC.woff") format("woff"), url("/fonts/futura/FuturaDemiC.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: wrap; }
@@ -322,8 +323,8 @@ template {
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
-  font-family: FuturaDemiC;
-  font-size: 0.88rem; }
+  font-family: 'Futura Demi';
+  font-size: 0.93rem; }
   .button:hover {
     cursor: pointer; }
   .button--primary {
@@ -345,10 +346,10 @@ template {
       transition: box-shadow 0.3s; }
   .button--calculation {
     padding: 19px 26px 19px;
-    font-size: 0.85rem; }
+    font-size: 0.93rem; }
   .button--request {
     padding: 17px 40px 18px;
-    font-size: 0.86rem; }
+    font-size: 0.93rem; }
 
 .label {
   font-size: 1.07rem; }
@@ -394,6 +395,20 @@ template {
   width: 85%;
   margin: auto; }
 
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1250px;
+  margin: 0 auto; }
+
+.col-30 {
+  flex-basis: 30%;
+  margin-bottom: 70px; }
+
+.col-50 {
+  flex-basis: 50%; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -406,11 +421,32 @@ body {
 
 .section {
   padding: 60px 0; }
+  .section--dark {
+    background-color: #131313;
+    color: #fff; }
   .section-title {
-    display: block;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Yeseva One', cursive; }
+    text-align: center; }
+    .section-title--left {
+      text-align: left; }
+    .section-title__heading {
+      text-transform: uppercase;
+      font-family: 'Yeseva One', cursive;
+      line-height: 138%; }
+      .section-title__heading--primary {
+        color: #E3B873; }
+    .section-title__word {
+      display: flex;
+      align-items: center; }
+      .section-title__word::after {
+        content: '';
+        width: 90px;
+        height: 2px;
+        background-color: #E3B873;
+        margin-left: 2rem; }
+    .section-title__text {
+      font-size: 1.28rem;
+      line-height: 2.07rem;
+      max-width: 31.57rem; }
     .section-title__image {
       display: flex;
       justify-content: center;
@@ -450,8 +486,8 @@ body {
 .logo {
   color: #E3B873;
   text-transform: uppercase;
-  font-family: FuturaDemiC;
-  font-size: 0.94rem; }
+  font-family: 'Futura Demi';
+  font-size: 1rem; }
 
 .nav:hover {
   cursor: pointer; }
@@ -462,13 +498,13 @@ body {
   text-transform: uppercase;
   margin-right: 2.6rem;
   transition: color 0.2s;
-  font-size: 0.85rem; }
+  font-size: 14px; }
   .nav__item:hover {
     color: #E3B873; }
 
 .phone {
   color: #E3B873;
-  font-family: FuturaDemiC;
+  font-family: 'Futura Demi';
   -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   font-size: 1.08rem;
@@ -495,16 +531,26 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(19, 19, 19, 0.7); }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3.46rem;
+    background-color: #131313; }
   .hero__content {
     max-width: 47.85rem;
     position: relative;
     margin-left: 4.28rem; }
   .hero__text {
-    font-size: 1.5rem;
+    font-size: 22px;
     max-width: 500px;
     font-family: 'Futura Book';
-    margin-bottom: 4.4rem;
-    margin-top: 1.3rem; }
+    margin-bottom: 3rem;
+    margin-top: 1.3rem;
+    line-height: 31px; }
   .hero__button {
     margin-right: 16px; }
   .hero__instagram {
@@ -515,6 +561,7 @@ body {
     height: 100%; }
   .hero__scroll-down {
     position: absolute;
+    z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -570,14 +617,6 @@ body {
 
 .types__section-title {
   margin-bottom: 2rem; }
-
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between; }
-
-.col {
-  flex-basis: 32%; }
 
 .card__text {
   position: relative;
@@ -672,15 +711,12 @@ body {
 
 @media (max-width: 2600px) and (min-width: 425px) {
   .image {
-    max-width: 421px; } }
+    max-width: 392px;
+    height: 421px; } }
 
 @media screen and (max-width: 1600px) {
   .row {
     justify-content: space-between; } }
-
-@media screen and (max-width: 1500px) {
-  .nav__item {
-    font-size: 12px; } }
 
 @media screen and (max-width: 1440px) {
   .section-title__heading {
@@ -692,11 +728,11 @@ body {
   .button--call {
     margin: 0px -5px 0px -4px; }
   .instagram__link {
-    margin: 40px -3px 0px 0px; }
+    margin: 40px -7px 55px 0px; }
   .hero__content {
-    margin: -25px 0px 0px 35px; }
+    margin: -85px 0px 0px 37px; }
   .hero__scroll-down {
-    margin: 0px 0px -26px -2px;
+    margin: 0px 0px 5px 1px;
     min-width: 17.9rem;
     min-height: 7.4rem; }
   .card__title {
@@ -704,20 +740,20 @@ body {
   .card__text {
     padding: 25px 32px; }
   .types__card--1 {
-    margin: -2px 0px 0px -6px; }
+    margin: 0px 0px 0px -36px; }
   .types__card--2 {
-    margin: -1px -5px 0px 0px; }
+    margin: 1px -8px 0px 0px; }
   .types__card--3 {
-    margin: -1px -9px 0px 6px; }
+    margin: 1px -45px 0px 0px; }
   .types__section-title--design {
     margin-bottom: 8px;
     padding-top: 10px; }
   .types__card--4 {
-    margin: -2px 2px 0px -6px; }
+    margin: -2px 7px 0px -18px; }
   .types__card--5 {
     margin: -3px 1px 0px 1px; }
   .types__card--6 {
-    margin: -3px -6px 0px 6px; }
+    margin: -3px -26px 0px 6px; }
   .card__list--design {
     padding: 0 0 32px 16px;
     margin: -1px 0px 0px -2px;
@@ -728,9 +764,18 @@ body {
     padding: 18px 78px 15px 33px; }
   .card__pricetag--3 {
     padding: 18px 78px 15px 33px;
-    margin: 0px 0px -5px 0px; } }
+    margin: 0px 0px -5px 0px; }
+  .card__pricetag--4 {
+    margin: 0px 0px 0px -8px;
+    padding: 17px 83px 17px 35px; }
+  .card__pricetag--5 {
+    margin: 0px 0px 0px 0px;
+    padding: 16px 77px 16px 30px; }
+  .card__pricetag--6 {
+    margin: 0px 0px -5px 0px;
+    padding: 17px 77px 16px 33px; } }
 
-@media (max-width: 1440px) and (min-width: 1220px) {
+@media (max-width: 1440px) and (min-width: 1221px) {
   .row {
     justify-content: space-evenly; }
   .col {
@@ -741,6 +786,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; } }
+
+@media (max-width: 1220px) and (min-width: 425px) {
+  .row {
+    justify-content: space-between; }
+  .col-30--desktop-medium-1 {
+    margin-left: 37px; }
+  .col-30--desktop-medium-3 {
+    margin-right: 25px; }
+  .col-30--desktop-medium-4 {
+    margin-left: 31px; }
+  .col-30--desktop-medium-6 {
+    margin-right: 25px; } }
 
 @media screen and (max-width: 1380px) {
   .nav {
@@ -793,6 +850,8 @@ body {
     min-width: 22.86rem;
     margin-bottom: 1.85rem; }
   .hero__scroll-down {
+    display: none; }
+  .hero::after {
     display: none; } }
 
 @media screen and (max-width: 586px) {
@@ -806,6 +865,20 @@ body {
     display: none; } }
 
 @media screen and (max-width: 425px) {
+  .card__item--mobile-style {
+    display: none; }
+  .col-30--mobile-style-1 {
+    margin: 0px 0px 65px 0px; }
+  .col-30--mobile-style-2 {
+    margin: 0px 0px 69px 0px; }
+  .col-30--mobile-style-3 {
+    margin: 0px 0px 69px 0px; }
+  .col-30--mobile-style-4 {
+    margin: 0px 0px 69px 0px; }
+  .col-30--mobile-style-5 {
+    margin: 0px 0px 69px 0px; }
+  .col-30--mobile-style-6 {
+    margin: 0px 0px 69px 0px; }
   .types__card--1 {
     margin: 13px 4px 0px 8px; }
   .types__card--2 {
@@ -832,11 +905,11 @@ body {
   .header {
     padding: 21px 0; }
   .phone {
-    font-size: 0.86rem;
+    font-size: 0.85rem;
     margin: 0 auto; }
   .logo {
     margin: 0px -11px;
-    font-size: 0.8rem; }
+    font-size: 0.86rem; }
   .title {
     margin: 6px -8px -4px -8px;
     font-size: 1.6rem; }
@@ -844,13 +917,12 @@ body {
     padding-top: 457px;
     height: 533px; }
     .hero__content {
-      margin-top: -356px;
-      margin-left: -1px; }
+      margin-top: -361px;
+      margin-left: -3px; }
     .hero__text {
-      margin-top: 21px;
       margin-left: -10px;
-      font-size: 17px;
-      margin-bottom: 52px; }
+      font-size: 18px;
+      line-height: 25px; }
   .hero__button {
     min-width: 24.7rem;
     margin-bottom: 24px; }
